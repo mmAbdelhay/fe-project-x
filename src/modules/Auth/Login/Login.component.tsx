@@ -17,7 +17,7 @@ const Login = (): JSX.Element => {
     };
 
     return (
-        <Container className={'container mt-5'}>
+        <Container className={'container mt-5 p-5 w-50'}>
             <h3>Login</h3>
             <form onSubmit={login}>
                 <Input

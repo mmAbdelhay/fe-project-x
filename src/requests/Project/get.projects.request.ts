@@ -1,21 +1,16 @@
-import axiosInstance from '../../services/axiosInstance.ts';
-import {EnvironmentData} from "../Environment/get.environments.request.ts";
+import axiosInstance from "../../services/axiosInstance.ts";
 
 export interface ProjectData {
-    id: number
-    githubUsername: string;
-    environmentId: number | undefined;
-    name: string;
-    haveBackEnd: boolean;
-    githubEmail: string;
-    Environment: EnvironmentData;
+  id: number;
+  description: string;
+  name: string;
+  size: number;
+  created_at: string;
+  full_name: string;
+  html_url: string;
 }
 
 export const getProjectsRequest = async (): Promise<ProjectData[]> => {
-    try {
-        const response = await axiosInstance.get('/projects');
-        return response.data?.data;
-    } catch (error) {
-        throw error;
-    }
+  const response = await axiosInstance.get("/projects");
+  return response.data?.data;
 };
