@@ -7,6 +7,7 @@ import { downloadProjectRequest } from "../../requests/Project/download.project.
 import { Input, Drawer } from "antd";
 import { getProjectsByTagRequest } from "../../requests/Project/list-by-tag.projects.request.ts";
 import { getReadmeFileRequest } from "../../requests/Project/get-readme.project.request.ts";
+import SearchInput from "@uk-source-web/search-input";
 
 function Home(): JSX.Element {
   // @ts-ignore
@@ -94,9 +95,18 @@ function Home(): JSX.Element {
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div className="w-25 my-2 mx-3">
-          <Input placeholder="Tag" onChange={(e) => handleTagChange(e.target.value)} />
-        </div>
+        <SearchInput
+          textInput={{
+            id: "search",
+            onChange: (e) => handleTagChange(e.target.value),
+            placeholder: "Search by tag",
+          }}
+          fieldWrapper={{
+            width: "default",
+            label: "",
+            showLabel: false,
+          }}
+        />
         {projects?.length > 0 &&
           projects?.map((project: ProjectData, idx: number) => {
             return (

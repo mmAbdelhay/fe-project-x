@@ -3,15 +3,24 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.scss";
 
+import { ThemeProvider, StyleSheetManager } from "styled-components";
+import WS10Theme from "@uk-source-web/theme-ws10";
+import isPropValid from "@emotion/is-prop-valid";
+
 import HOC from "./components/Main/HOC.component.tsx";
 import StoreProvider from "./context/StoreProvider.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <StoreProvider>
-      <HOC>
-        <App />
-      </HOC>
-    </StoreProvider>
+    <StyleSheetManager shouldForwardProp={isPropValid} enableVendorPrefixes>
+      <ThemeProvider theme={WS10Theme}>
+        <WS10Theme.globalStyles />
+        <StoreProvider>
+          <HOC>
+            <App />
+          </HOC>
+        </StoreProvider>
+      </ThemeProvider>
+    </StyleSheetManager>
   </React.StrictMode>
 );
