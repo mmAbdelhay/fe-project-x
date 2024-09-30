@@ -4,9 +4,12 @@ import { MainContext } from "../../context/StoreProvider.tsx";
 import { getProjectsRequest, ProjectData } from "../../requests/Project/get.projects.request.ts";
 import LoadingCube from "../../components/SmallComponents/Loading/LoadingCube.tsx";
 import { downloadProjectRequest } from "../../requests/Project/download.project.request.ts";
-import { Input, Drawer } from "antd";
+import { Drawer } from "antd";
 import { getProjectsByTagRequest } from "../../requests/Project/list-by-tag.projects.request.ts";
 import { getReadmeFileRequest } from "../../requests/Project/get-readme.project.request.ts";
+import SearchInput from "@uk-source-web/search-input";
+import Button from "@uk-source-web/button";
+import Paragraph from "@uk-source-web/paragraph";
 
 function Home(): JSX.Element {
   // @ts-ignore
@@ -15,6 +18,7 @@ function Home(): JSX.Element {
   const [loading, setLoading] = useState<boolean>(false);
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>("");
+  const [search, setSearch] = useState<string>("");
   const [readMeFileContent, setReadMeFileContent] = useState<string>("");
 
   useEffect(() => {
@@ -35,8 +39,8 @@ function Home(): JSX.Element {
     }
   };
 
-  const handleTagChange = async (tag: string) => {
-    const projects: ProjectData[] = await getProjectsByTagRequest(tag);
+  const handleTagChange = async () => {
+    const projects: ProjectData[] = await getProjectsByTagRequest(search);
     if (projects) {
       setProjects(projects);
       setErrorMessage("");
@@ -73,11 +77,20 @@ function Home(): JSX.Element {
           </div>
         </div>
         <div className="w-25 my-2 mx-3">
-          <Input
-            placeholder="Tag"
-            onPressEnter={(e) => {
-              // @ts-ignore
-              handleTagChange(e.target?.value);
+          <SearchInput
+            textInput={{
+              id: "search",
+              onChange: (e: React.ChangeEvent<HTMLInputElement>) => setSearch(e.target.value),
+              placeholder: "Search by tag",
+            }}
+            fieldWrapper={{
+              width: "default",
+              label: "",
+              showLabel: false,
+            }}
+            onClear={() => setSearch("")}
+            searchIconButton={{
+              onClick: handleTagChange,
             }}
           />
         </div>
@@ -94,9 +107,21 @@ function Home(): JSX.Element {
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div className="w-25 my-2 mx-3">
-          <Input placeholder="Tag" onChange={(e) => handleTagChange(e.target.value)} />
-        </div>
+        <SearchInput
+          textInput={{
+            id: "search",
+            onChange: (e: React.ChangeEvent<HTMLInputElement>) => setSearch(e.target.value),
+            placeholder: "Search by tag",
+          }}
+          fieldWrapper={{
+            width: "default",
+            label: "",
+            showLabel: false,
+          }}
+          searchIconButton={{
+            onClick: handleTagChange,
+          }}
+        />
         {projects?.length > 0 &&
           projects?.map((project: ProjectData, idx: number) => {
             return (
@@ -113,23 +138,26 @@ function Home(): JSX.Element {
                       </button>
                     </p>
                     <div className={"d-flex justify-content-start gap-2 flex-reverse"}>
-                      <button
-                        className={`btn btn-sm btn-danger float-end`}
-                        onClick={() => downloadProjectRequest(project.name)}
-                      >
-                        ↓
-                      </button>
-                      <button className={`btn btn-sm btn-danger float-end`} onClick={() => addToCart(project)}>
-                        +
-                      </button>
+                      <Button
+                        text="Download"
+                        appearance="primary"
+                        onClick={() => {
+                          downloadProjectRequest(project.name);
+                        }}
+                      />
+                      <Button
+                        text="Add to cart"
+                        appearance="primary"
+                        onClick={() => {
+                          addToCart(project);
+                        }}
+                      />
                     </div>
                   </div>
-                  <p>{project.html_url}</p>
-                  <p>
-                    <small>
-                      {new Date(project.created_at).toUTCString()} / {project.size / 1000} MB
-                    </small>
-                  </p>
+                  <Paragraph size={2}> {project.html_url}</Paragraph>
+                  <Paragraph size={1}>
+                    {new Date(project.created_at).toUTCString()} / {project.size / 1000} MB
+                  </Paragraph>
                 </div>
                 <Drawer title="Readme File" open={openDrawer} onClose={() => setOpenDrawer(false)} width={1024}>
                   <div dangerouslySetInnerHTML={{ __html: readMeFileContent }} />

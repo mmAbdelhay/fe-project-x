@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import { checkIfLoggedIn } from "../../services/checkIfLoggedIn";
 import { MainContext } from "../../context/StoreProvider.tsx";
-
+import logo from "../../assets/images/back_logo.svg";
 import { logout } from "../../services/logout.ts";
-import { Button, Modal } from "antd";
 import { useState, useContext } from "react";
 import { multipleProjectsdownloadRequest } from "../../requests/Project/download-multiple.project.request.ts";
 import { ProjectData } from "../../requests/Project/get.projects.request.ts";
-
+import { OverlayProvider } from "@uk-source-web/overlay-controller";
+import Button from "@uk-source-web/button";
+import { Modal, Button as ButtonAntd } from "antd";
 export default function Header() {
   const isLoggedIn = checkIfLoggedIn();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -29,9 +30,10 @@ export default function Header() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-danger">
+    <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: "#E60000" }}>
       <div className="container-fluid">
-        <span className="navbar-brand">Project X</span>
+        <img src={logo} width={40} alt="logo" className="p-2" style={{ color: "black" }} />
+        <span className="navbar-brand ml-2">Project X</span>
         <button
           className="navbar-toggler"
           type="button"
@@ -64,9 +66,9 @@ export default function Header() {
               </>
             ) : (
               <div className="d-flex gap-2 align-items-center">
-                <Button type="link" onClick={showModal} className="nav-link text-light">
+                <ButtonAntd type="link" onClick={showModal} className="nav-link text-light">
                   Cart
-                </Button>
+                </ButtonAntd>
                 <Link to="/logout" className="nav-link text-light" onClick={logout}>
                   logout
                 </Link>
@@ -75,54 +77,57 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <Modal
-        title="Cart"
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-        styles={{
-          body: {
-            maxHeight: "50vh",
-            overflowY: "auto",
-          },
-        }}
-        width={800}
-        okText="Download all"
-        okButtonProps={{ danger: true, disabled: cart.length <= 0 }}
-        cancelButtonProps={{ style: { display: "none" } }}
-      >
-        {cart.length > 0 ? (
-          cart.map((project: ProjectData, idx: number) => {
-            return (
-              <div key={idx} className={"d-flex justify-content-start gap-3 card p-3 m-2 max-h-64"}>
-                <div>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <p>
-                      <b>{project.name}</b> <small>{project.description}</small>
-                    </p>
-                    <div className={"d-flex justify-content-start gap-2 flex-reverse"}>
-                      <button className={`btn btn-sm btn-danger float-end`} onClick={() => console.log("test")}>
-                        ↓
-                      </button>
-                      <button className={`btn btn-sm btn-danger float-end`} onClick={() => removeFromCart(project)}>
-                        -
-                      </button>
+
+      <OverlayProvider>
+        <Modal
+          title="Cart"
+          open={isModalOpen}
+          onOk={handleOk}
+          onCancel={handleCancel}
+          width={800}
+          okText="Download all"
+          okButtonProps={{
+            disabled: cart.length <= 0,
+            style: {
+              backgroundColor: "#E60000",
+              padding: "16px 24px",
+              height: "44px",
+              minWidth: "152px",
+              fontWeight: "400",
+              color: "#FFFFFF",
+              borderRadius: "6px",
+            },
+          }}
+          cancelButtonProps={{ style: { display: "none" } }}
+        >
+          {cart.length > 0 ? (
+            cart.map((project: ProjectData, idx: number) => {
+              return (
+                <div key={idx} className={"d-flex justify-content-start gap-3 card p-3 m-3 max-h-64"}>
+                  <div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <p>
+                        <b>{project.name}</b> <small>{project.description}</small>
+                      </p>
+                      <div className={"d-flex justify-content-start gap-2 flex-reverse"}>
+                        <Button text="Remove" appearance="primary" onClick={() => removeFromCart(project)} />
+                      </div>
                     </div>
+                    <p>{project.html_url}</p>
+                    <p>
+                      <small>
+                        {new Date(project.created_at).toUTCString()} / {project.size / 1000} MB
+                      </small>
+                    </p>
                   </div>
-                  <p>{project.html_url}</p>
-                  <p>
-                    <small>
-                      {new Date(project.created_at).toUTCString()} / {project.size / 1000} MB
-                    </small>
-                  </p>
                 </div>
-              </div>
-            );
-          })
-        ) : (
-          <p className="text-center">Cart is Empty</p>
-        )}
-      </Modal>
+              );
+            })
+          ) : (
+            <p className="text-center">Cart is Empty</p>
+          )}
+        </Modal>
+      </OverlayProvider>
     </nav>
   );
 }
