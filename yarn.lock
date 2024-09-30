@@ -987,7 +987,7 @@
   resolved "https://registry.yarnpkg.com/@babel/regjsgen/-/regjsgen-0.8.0.tgz#f0ba69b075e1f05fb2825b7fad991e7adbb18310"
   integrity sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==
 
-"@babel/runtime@^7.10.1", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.7", "@babel/runtime@^7.18.0", "@babel/runtime@^7.18.3", "@babel/runtime@^7.20.0", "@babel/runtime@^7.20.7", "@babel/runtime@^7.21.0", "@babel/runtime@^7.22.5", "@babel/runtime@^7.23.2", "@babel/runtime@^7.23.6", "@babel/runtime@^7.23.8", "@babel/runtime@^7.23.9", "@babel/runtime@^7.24.4", "@babel/runtime@^7.24.7", "@babel/runtime@^7.24.8", "@babel/runtime@^7.25.0", "@babel/runtime@^7.25.6", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.7", "@babel/runtime@^7.18.0", "@babel/runtime@^7.18.3", "@babel/runtime@^7.20.0", "@babel/runtime@^7.20.7", "@babel/runtime@^7.21.0", "@babel/runtime@^7.22.5", "@babel/runtime@^7.23.2", "@babel/runtime@^7.23.6", "@babel/runtime@^7.23.8", "@babel/runtime@^7.23.9", "@babel/runtime@^7.24.4", "@babel/runtime@^7.24.7", "@babel/runtime@^7.24.8", "@babel/runtime@^7.25.0", "@babel/runtime@^7.25.6", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
   version "7.25.6"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.25.6.tgz#9afc3289f7184d8d7f98b099884c26317b9264d2"
   integrity sha512-VBj9MYyDb9tuLq7yzqjgzt6Q+IBQLrGZfdjOekyEirZPHxXWoTSGUTMrpsfi58Up73d13NfYLv8HT9vmznjzhQ==
@@ -1738,10 +1738,25 @@
   resolved "https://pkgs.dev.azure.com/VFCom-oneportal/_packaging/uk-source-web/npm/registry/@uk-source-web/base-props/-/base-props-1.100.0.tgz#f8b69e1de7b1becfd3fae5580c5e721063d5f34a"
   integrity sha1-+LaeHeexvs/T+uVYDF5yEGPV80o=
 
+"@uk-source-web/button@^3.100.0":
+  version "3.100.0"
+  resolved "https://pkgs.dev.azure.com/VFCom-oneportal/_packaging/uk-source-web/npm/registry/@uk-source-web/button/-/button-3.100.0.tgz#aa3c74d70cbfa7d3b5bf716e1bef14128b869efe"
+  integrity sha1-qjx01wy/p9O1v3FuG+8UEouGnv4=
+
+"@uk-source-web/container@^3.100.0":
+  version "3.100.0"
+  resolved "https://pkgs.dev.azure.com/VFCom-oneportal/_packaging/uk-source-web/npm/registry/@uk-source-web/container/-/container-3.100.0.tgz#b99ed3d865c049c554d75a79ba0c87608246553e"
+  integrity sha1-uZ7T2GXAScVU11p5ugyHYIJGVT4=
+
 "@uk-source-web/field-wrapper@^3.100.0":
   version "3.100.0"
   resolved "https://pkgs.dev.azure.com/VFCom-oneportal/_packaging/uk-source-web/npm/registry/@uk-source-web/field-wrapper/-/field-wrapper-3.100.0.tgz#33629c7e6cb20c16eac0e24bcdf9c6d803f1338b"
   integrity sha1-M2KcfmyyDBbqwOJLzfnG2APxM4s=
+
+"@uk-source-web/heading@^3.100.0":
+  version "3.100.0"
+  resolved "https://pkgs.dev.azure.com/VFCom-oneportal/_packaging/uk-source-web/npm/registry/@uk-source-web/heading/-/heading-3.100.0.tgz#ad2a1ea2f3893525f2f0353576e886da66f0d5e5"
+  integrity sha1-rSoeovOJNSXy8DU1duiG2mbw1eU=
 
 "@uk-source-web/helpers@^3.100.0":
   version "3.100.0"
@@ -1776,6 +1791,11 @@
   resolved "https://pkgs.dev.azure.com/VFCom-oneportal/_packaging/uk-source-web/npm/registry/@uk-source-web/interactive-icon/-/interactive-icon-3.100.0.tgz#72b9b4eb7f72e9907668da1386cdb68c08cb653a"
   integrity sha1-crm0639y6ZB2aNoThs22jAjLZTo=
 
+"@uk-source-web/link-with-icon@^3.100.0":
+  version "3.100.0"
+  resolved "https://pkgs.dev.azure.com/VFCom-oneportal/_packaging/uk-source-web/npm/registry/@uk-source-web/link-with-icon/-/link-with-icon-3.100.0.tgz#8a5449f632d51ec7b9a3743ecd9c2f28344b1cda"
+  integrity sha1-ilRJ9jLVHse5o3Q+zZwvKDRLHNo=
+
 "@uk-source-web/list-group@^3.100.0":
   version "3.100.0"
   resolved "https://pkgs.dev.azure.com/VFCom-oneportal/_packaging/uk-source-web/npm/registry/@uk-source-web/list-group/-/list-group-3.100.0.tgz#d90ebd3a27c48b1615c5910a997d0556b4ef2382"
@@ -1803,20 +1823,58 @@
   resolved "https://pkgs.dev.azure.com/VFCom-oneportal/_packaging/uk-source-web/npm/registry/@uk-source-web/mixins/-/mixins-3.100.0.tgz#4a4844764ee7d3b2ce7df7dcaff971bcc7c9bb22"
   integrity sha1-SkhEdk7n07LOfffcr/lxvMfJuyI=
 
+"@uk-source-web/modal@^4.100.0":
+  version "4.100.0"
+  resolved "https://pkgs.dev.azure.com/VFCom-oneportal/_packaging/uk-source-web/npm/registry/@uk-source-web/modal/-/modal-4.100.0.tgz#b8f5f6661f12bd836a0b697c14a87700c827901b"
+  integrity sha1-uPX2Zh8SvYNqC2l8FKh3AMgnkBs=
+  dependencies:
+    uuid "~8.3.2"
+
 "@uk-source-web/number-badge@^3.100.0":
   version "3.100.0"
   resolved "https://pkgs.dev.azure.com/VFCom-oneportal/_packaging/uk-source-web/npm/registry/@uk-source-web/number-badge/-/number-badge-3.100.0.tgz#cf21ec47d6ac2eb6fdb28445e92c29a59dd6809d"
   integrity sha1-zyHsR9asLrb9soRF6SwppZ3WgJ0=
+
+"@uk-source-web/overlay-controller@^4.100.0":
+  version "4.100.0"
+  resolved "https://pkgs.dev.azure.com/VFCom-oneportal/_packaging/uk-source-web/npm/registry/@uk-source-web/overlay-controller/-/overlay-controller-4.100.0.tgz#3ffdd51a0dbf841113949ab5671fe6c3b4521805"
+  integrity sha1-P/3VGg2/hBETlJq1Zx/mw7RSGAU=
+  dependencies:
+    lodash "^4.17.21"
+    react-dom "^16.8.6"
+    react-focus-lock "2.5.1"
+
+"@uk-source-web/overlay@^3.100.0":
+  version "3.100.0"
+  resolved "https://pkgs.dev.azure.com/VFCom-oneportal/_packaging/uk-source-web/npm/registry/@uk-source-web/overlay/-/overlay-3.100.0.tgz#756d8566fd866724efc8a1588b7d68516647cf9e"
+  integrity sha1-dW2FZv2GZyTvyKFYi31oUWZHz54=
+
+"@uk-source-web/paragraph@^3.100.0":
+  version "3.100.0"
+  resolved "https://pkgs.dev.azure.com/VFCom-oneportal/_packaging/uk-source-web/npm/registry/@uk-source-web/paragraph/-/paragraph-3.100.0.tgz#53002083e36f0446d568c0c3c274dd42f2cecb08"
+  integrity sha1-UwAgg+NvBEbVaMDDwnTdQvLOywg=
 
 "@uk-source-web/search-input@^3.100.0":
   version "3.100.0"
   resolved "https://pkgs.dev.azure.com/VFCom-oneportal/_packaging/uk-source-web/npm/registry/@uk-source-web/search-input/-/search-input-3.100.0.tgz#b658a32dd9974e61742a9a0b0fa7344ce143b4a7"
   integrity sha1-tlijLdmXTmF0KpoLD6c0TOFDtKc=
 
+"@uk-source-web/simple-grid@^4.100.0":
+  version "4.100.0"
+  resolved "https://pkgs.dev.azure.com/VFCom-oneportal/_packaging/uk-source-web/npm/registry/@uk-source-web/simple-grid/-/simple-grid-4.100.0.tgz#3639491e7c22b86608444649d3d7452ff094e0c6"
+  integrity sha1-NjlJHnwiuGYIREZJ09dFL/CU4MY=
+  dependencies:
+    react-lazyload "^3.2.0"
+
 "@uk-source-web/styles@^3.100.0":
   version "3.100.0"
   resolved "https://pkgs.dev.azure.com/VFCom-oneportal/_packaging/uk-source-web/npm/registry/@uk-source-web/styles/-/styles-3.100.0.tgz#b0205be7d6b5be50463c7b07c2e01614e48718ad"
   integrity sha1-sCBb59a1vlBGPHsHwuAWFOSHGK0=
+
+"@uk-source-web/text-input-with-label@^3.100.0":
+  version "3.100.0"
+  resolved "https://pkgs.dev.azure.com/VFCom-oneportal/_packaging/uk-source-web/npm/registry/@uk-source-web/text-input-with-label/-/text-input-with-label-3.100.0.tgz#6ed688c259e103e770e36b8d4a593bc7ce1df1b3"
+  integrity sha1-btaIwlnhA+dw42uNSlk7x84d8bM=
 
 "@uk-source-web/text-input@^3.100.0":
   version "3.100.0"
@@ -2472,6 +2530,11 @@ delayed-stream@~1.0.0:
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==
 
+detect-node-es@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/detect-node-es/-/detect-node-es-1.1.0.tgz#163acdf643330caa0b4cd7c21e7ee7755d6fa493"
+  integrity sha512-ypdmJU/TbBby2Dxibuv7ZLW3Bs1QEmM7nHjEANfohJLvE0XVujisn1qPJcZxg+qDucsr+bP6fLD1rPS3AhJ7EQ==
+
 dir-glob@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/dir-glob/-/dir-glob-3.0.1.tgz#56dbf73d992a4a93ba1584f4534063fd2e41717f"
@@ -2869,6 +2932,13 @@ flatted@^3.2.9:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.3.1.tgz#21db470729a6734d4997002f439cb308987f567a"
   integrity sha512-X8cqMLLie7KsNUDSdzeN8FYK9rEt4Dt67OsG/DNGnYTSDBG4uFAJFBnUeiV+zCVAvwFy56IjM9sH51jVaEhNxw==
+
+focus-lock@^0.9.1:
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/focus-lock/-/focus-lock-0.9.2.tgz#9d30918aaa99b1b97677731053d017f82a540d5b"
+  integrity sha512-YtHxjX7a0IC0ZACL5wsX8QdncXofWpGPNoVMuI/nZUrPGp6LmNI6+D5j0pPj+v8Kw5EpweA+T5yImK0rnWf7oQ==
+  dependencies:
+    tslib "^2.0.3"
 
 follow-redirects@^1.15.6:
   version "1.15.9"
@@ -4251,6 +4321,23 @@ rc-virtual-list@^3.14.2, rc-virtual-list@^3.5.1, rc-virtual-list@^3.5.2:
     rc-resize-observer "^1.0.0"
     rc-util "^5.36.0"
 
+react-clientside-effect@^1.2.2:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/react-clientside-effect/-/react-clientside-effect-1.2.6.tgz#29f9b14e944a376b03fb650eed2a754dd128ea3a"
+  integrity sha512-XGGGRQAKY+q25Lz9a/4EPqom7WRjz3z9R2k4jhVKA/puQFH/5Nt27vFZYql4m4NVNdUvX8PS3O7r/Zzm7cjUlg==
+  dependencies:
+    "@babel/runtime" "^7.12.13"
+
+react-dom@^16.8.6:
+  version "16.14.0"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.14.0.tgz#7ad838ec29a777fb3c75c3a190f661cf92ab8b89"
+  integrity sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
+    scheduler "^0.19.1"
+
 react-dom@^18.2.0:
   version "18.3.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.3.1.tgz#c2265d79511b57d479b3dd3fdfa51536494c5cb4"
@@ -4258,6 +4345,18 @@ react-dom@^18.2.0:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.2"
+
+react-focus-lock@2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/react-focus-lock/-/react-focus-lock-2.5.1.tgz#e2060c5d7b02c62d79c4f103d0fc5a1288bc8f75"
+  integrity sha512-gOToRZKVEymGEjFaTRUKgJsdYQrNosoiK7yZnXnnd8bYew4vMzk3Rxb0Q4nyrGwsFuUmgQiSAulQirA0J+v4hA==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    focus-lock "^0.9.1"
+    prop-types "^15.6.2"
+    react-clientside-effect "^1.2.2"
+    use-callback-ref "^1.2.1"
+    use-sidecar "^1.0.1"
 
 react-i18next@^15.0.2:
   version "15.0.2"
@@ -4276,6 +4375,11 @@ react-is@^18.2.0:
   version "18.3.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.3.1.tgz#e83557dc12eae63a99e003a46388b1dcbb44db7e"
   integrity sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==
+
+react-lazyload@^3.2.0:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/react-lazyload/-/react-lazyload-3.2.1.tgz#320087741ee6aaf693369b67690799423ed4d7a3"
+  integrity sha512-oDLlLOI/rRLY0fUh/HYFCy4CqCe7zdJXv6oTl2pC30tN3ezWxvwcdHYfD/ZkrGOMOOT5pO7hNLSvg7WsmAij1w==
 
 react-refresh@^0.14.2:
   version "0.14.2"
@@ -4554,6 +4658,14 @@ sass@^1.70.0:
     chokidar "^4.0.0"
     immutable "^4.0.0"
     source-map-js ">=0.6.2 <2.0.0"
+
+scheduler@^0.19.1:
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.19.1.tgz#4f3e2ed2c1a7d65681f4c854fa8c5a1ccb40f196"
+  integrity sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
 
 scheduler@^0.23.2:
   version "0.23.2"
@@ -4929,7 +5041,7 @@ tslib@2.6.2:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.6.2.tgz#703ac29425e7b37cd6fd456e92404d46d1f3e4ae"
   integrity sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==
 
-tslib@^2.1.0, tslib@^2.6.2:
+tslib@^2.0.0, tslib@^2.0.3, tslib@^2.1.0, tslib@^2.6.2:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.7.0.tgz#d9b40c5c40ab59e8738f297df3087bf1a2690c01"
   integrity sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==
@@ -5075,10 +5187,30 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
+use-callback-ref@^1.2.1:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/use-callback-ref/-/use-callback-ref-1.3.2.tgz#6134c7f6ff76e2be0b56c809b17a650c942b1693"
+  integrity sha512-elOQwe6Q8gqZgDA8mrh44qRTQqpIHDcZ3hXTLjBe1i4ph8XpNJnO+aQf3NaG+lriLopI4HMx9VjQLfPQ6vhnoA==
+  dependencies:
+    tslib "^2.0.0"
+
+use-sidecar@^1.0.1:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/use-sidecar/-/use-sidecar-1.1.2.tgz#2f43126ba2d7d7e117aa5855e5d8f0276dfe73c2"
+  integrity sha512-epTbsLuzZ7lPClpz2TyryBfztm7m+28DlEv2ZCQ3MDr5ssiwyOwGH/e5F9CkfWjJ1t4clvI58yF822/GUkjjhw==
+  dependencies:
+    detect-node-es "^1.1.0"
+    tslib "^2.0.0"
+
 util-deprecate@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
+
+uuid@~8.3.2:
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
+  integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
 
 vite-plugin-pwa@^0.17.5:
   version "0.17.5"

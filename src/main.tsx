@@ -10,6 +10,8 @@ import isPropValid from "@emotion/is-prop-valid";
 import HOC from "./components/Main/HOC.component.tsx";
 import StoreProvider from "./context/StoreProvider.tsx";
 
+WS10Theme.setBaseAssetLocation("https://oneportal.vodafone.com/cdn/source-web/");
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <StyleSheetManager shouldForwardProp={isPropValid} enableVendorPrefixes>
